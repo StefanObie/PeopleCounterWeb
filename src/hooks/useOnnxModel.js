@@ -9,14 +9,14 @@ export const useOnnxModel = () => {
   useEffect(() => {
     const loadModel = async () => {
       try {
-        // Set WASM path to the node_modules location
-        ort.env.wasm.wasmPaths = '/node_modules/onnxruntime-web/dist/'
+        // Runtime assets are copied to public/ort during prebuild.
+        ort.env.wasm.wasmPaths = '/ort/'
 
         // Configure ONNX Runtime
         ort.env.wasm.numThreads = 1 // Disable threading for better compatibility
         ort.env.wasm.simd = false // Disable SIMD for simpler setup
 
-        const sess = await ort.InferenceSession.create('crowdhuman_yolov5m.onnx', {
+        const sess = await ort.InferenceSession.create('/crowdhuman_yolov5m.onnx', {
           executionProviders: ['wasm'],
           graphOptimizationLevel: 'all',
         })
