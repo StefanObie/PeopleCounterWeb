@@ -2,7 +2,7 @@
 A privacy-focused web app that counts people in images using an on-device ONNX Runtime. 
 
 > ## Go to the Live Website
-> [Download People Counter App](https://play.google.com/store/apps/details?id=com.people.counter)
+> [People Counter](https://peoplecounter.crossland.co.za/)
 
 ## iOS and Web Users
 This is an iOS/Web compromise for the published [Android app](https://play.google.com/store/apps/details?id=com.people.counter). Save the webpage to your home screen as a progressive web app (PWA) for a native-like experience. This version has reduced functionality compared to the Android app, but still provides fast, local people counting without any image uploads.
